@@ -1,7 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Fragment } from "react";
-import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -19,7 +17,7 @@ export default function Home() {
         {/* left */}
         <div className="hidden xl:flex flex-col items-center justify-center w-full h-full">
           <div id="ppbox" className="border-4 -mt-26 rounded-full bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]">
-            <Image src="/img/remove.png" layout="fill" objectFit="cover" />
+            <Image alt="ilham iyadillah" src="/img/remove.png" layout="fill" objectFit="cover" />
           </div>
           <div className="mb-10 pt-10">
             <h1 id="lato" className="text-black text-4xl font-semibold">
@@ -27,10 +25,10 @@ export default function Home() {
             </h1>
             <div className="flex flex-row gap-5 justify-center mt-16">
               <a href="https://www.instagram.com/ilham.i7/" className="w-fit">
-                <img id="icon" src="/img/insta.png"></img>
+                <Image alt="instagram" src="/img/insta.png" width={30} height={30} />
               </a>
               <a href="https://www.linkedin.com/in/hiyadillah/" className="w-fit">
-                <img id="icon" src="/img/linkedin.png"></img>
+                <Image alt="linkedin" src="/img/linkedin.png" width={30} height={30} />
               </a>
             </div>
           </div>
@@ -40,7 +38,7 @@ export default function Home() {
           {/* photo in mobile */}
           <div className="flex flex-col xl:hidden mb-16">
             <div id="ppbox" className="mx-auto -mt-26 rounded-full bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]">
-              <Image src="/img/remove.png" layout="fill" objectFit="cover" />
+              <Image alt="ilham iyadillah" src="/img/remove.png" layout="fill" objectFit="cover" />
             </div>
             <div className="flex flex-col items-center mb-10 pt-10">
               <h1 id="lato" className="text-white text-4xl font-semibold ">
@@ -48,24 +46,24 @@ export default function Home() {
               </h1>
               <div className="flex flex-row gap-5 justify-center mt-16">
                 <a href="https://www.instagram.com/ilham.i7/" className="w-fit">
-                  <img id="icon" src="/img/insta.png"></img>
+                  <Image alt="instagram" src="/img/insta.png" width={30} height={30} />
                 </a>
                 <a href="https://www.linkedin.com/in/hiyadillah/" className="w-fit">
-                  <img id="icon" src="/img/linkedin.png"></img>
+                  <Image alt="linkedin" src="/img/linkedin.png" width={30} height={30} />
                 </a>
               </div>
             </div>
           </div>
           <div className="flex mb-16  text-9xl font-bold drop-shadow-2xl">Hello!</div>
           <div className="flex text-5xl mb-16 font-semibold">
-            I'M
+            I&apos;M
             <span className="pl-5 text-yellow-500 " id="lato">
               Ilham Iyadillah
             </span>
           </div>
           <div className="flex ">
             <p className="text-xl font-semibold text-justify">
-              I’m an active student in IPB University semester 7th. I love to build elegant and functional website. Currently interest in react framework and game development. i have softskill consist of leadership in computer science
+              Im an active student in IPB University semester 7th. I love to build elegant and functional website. Currently interest in react framework and game development. i have softskill consist of leadership in computer science
               student club and teamwork in startup company “imperio fish”.
             </p>
           </div>
@@ -82,7 +80,7 @@ export default function Home() {
             {/* gambar pertama */}
             <div className="flex flex-col justify-center mt-16 mx-16 ">
               <div id="boxwork">
-                <Image className="" src="/img/Imperiofish.png" layout="fill" objectFit="contain" />
+                <Image className="" src="/img/Imperiofish.png" layout="fill" objectFit="contain" alt="Gambar Web Proyek Imperiofish" />
               </div>
               <div id="inter" className="flex flex-col justify-center my-5 ">
                 <h1 className="text-xl self-center">Imperiofish</h1> <br />
@@ -100,7 +98,7 @@ export default function Home() {
             {/* gambar kedua */}
             <div className="flex flex-col justify-center mt-16 mx-16 ">
               <div id="boxwork">
-                <Image className="" src="/img/LinkedOn.png" layout="fill" objectFit="contain" />
+                <Image className="" src="/img/LinkedOn.png" layout="fill" objectFit="contain" alt="Gambar Web Proyek LinkedOn" />
               </div>
               <div id="inter" className="flex flex-col justify-center my-5 ">
                 <h1 className="text-xl self-center">LinkedOn</h1> <br />

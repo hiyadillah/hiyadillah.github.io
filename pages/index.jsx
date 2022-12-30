@@ -93,8 +93,8 @@ export default function Home() {
           </div>
           <div className="flex ">
             <p className="text-xl font-semibold text-justify">
-              Im an active student in IPB University semester 7th. I love to build elegant and functional website. Currently interest in react framework and game development. i have softskill consist of leadership in computer science
-              student club and teamwork in startup company “imperio fish”.
+              Im an active student in IPB University 7th semester. I love to build elegant and functional website. Currently interest in developing web as frontend developer. i have softskill consist of leadership and teamwork. And my
+              hardskill are reactjs, nextjs, laravel, html, css, javascript, php.
             </p>
           </div>
         </div>
@@ -115,7 +115,10 @@ export default function Home() {
                       <Image className="" src={`${data.img}`} layout="fill" objectFit="contain" alt="Gambar Web Proyek Imperiofish" />
                     </div>
                     <div id="inter" className="flex flex-col justify-center my-5 ">
-                      <h1 className="text-xl self-center">{`${data.name}`}</h1> <br />
+                      <h1 className="text-xl self-center">
+                        <a href={`${data.link}`}>{`${data.name}`}</a>
+                      </h1>{" "}
+                      <br />
                       <div className="text-black mx-auto  my-5">
                         <span className="">
                           Role: {`${data.role}`} <br /> Framework : {`${data.framework}`} <br /> Fitur : <br />

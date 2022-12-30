@@ -1,7 +1,34 @@
 import Head from "next/head";
 import Image from "next/image";
+import { Fragment } from "react";
 
 export default function Home() {
+  const data = [
+    {
+      name: "Imperio Fish",
+      role: "Frontend",
+      link: "https://github.com/hiyadillah/IMPERIO",
+      img: "/img/Imperiofish.png",
+      framework: "React, Laravel",
+      feature: ["Search", "Profile Management (Password, biodata)"],
+    },
+    {
+      name: "LinkedON",
+      role: "Frontend",
+      link: "#",
+      img: "/img/LinkedOn.png",
+      framework: "Laravel",
+      feature: ["Search", "CRUD", "Profile Management (Password, biodata)"],
+    },
+    {
+      name: "Truends",
+      role: "Frontend & QA",
+      link: "https://github.com/hiyadillah/KOM330_Truends",
+      img: "/img/truends.png",
+      framework: "Nextjs, React, Playwright",
+      feature: ["CRUD", "Authentication", "Content Management"],
+    },
+  ];
   return (
     <div>
       <Head>
@@ -29,6 +56,9 @@ export default function Home() {
               </a>
               <a href="https://www.linkedin.com/in/hiyadillah/" className="w-fit">
                 <Image alt="linkedin" src="/img/linkedin.png" width={30} height={30} />
+              </a>
+              <a href="https://github.com/hiyadillah/" className="w-fit">
+                <Image alt="github" src="/img/github.png" width={30} height={30} />
               </a>
             </div>
           </div>
@@ -77,43 +107,30 @@ export default function Home() {
             <h1 className="text-7xl font-bold">My Work</h1>
           </div>
           <div className="grid xl:grid-cols-2 justify-evenly lg:flex-col">
-            {/* gambar pertama */}
-            <div className="flex flex-col justify-center mt-16 mx-16 ">
-              <div id="boxwork">
-                <Image className="" src="/img/Imperiofish.png" layout="fill" objectFit="contain" alt="Gambar Web Proyek Imperiofish" />
-              </div>
-              <div id="inter" className="flex flex-col justify-center my-5 ">
-                <h1 className="text-xl self-center">Imperiofish</h1> <br />
-                <div className="text-black mx-auto  my-5">
-                  <span className="">
-                    Role: Frontend <br /> Framework : React, Laravel <br /> Fitur : <br />
-                  </span>
-                  <lo>
-                    <li>Search</li>
-                    <li>Profile Management (Password, biodata)</li>
-                  </lo>
-                </div>
-              </div>
-            </div>
-            {/* gambar kedua */}
-            <div className="flex flex-col justify-center mt-16 mx-16 ">
-              <div id="boxwork">
-                <Image className="" src="/img/LinkedOn.png" layout="fill" objectFit="contain" alt="Gambar Web Proyek LinkedOn" />
-              </div>
-              <div id="inter" className="flex flex-col justify-center my-5 ">
-                <h1 className="text-xl self-center">LinkedOn</h1> <br />
-                <div className="text-black mx-auto my-5">
-                  <span>
-                    Role: Frontend <br /> Framework : Laravel <br /> Fitur : <br />
-                  </span>
-                  <lo>
-                    <li>CRDUD</li>
-                    <li>Search</li>
-                    <li>Profile Management (Password, biodata)</li>
-                  </lo>
-                </div>
-              </div>
-            </div>
+            {data.map((data, index) => {
+              return (
+                <Fragment key={index}>
+                  <div className="flex flex-col justify-center mt-16 mx-16 ">
+                    <div id="boxwork">
+                      <Image className="" src={`${data.img}`} layout="fill" objectFit="contain" alt="Gambar Web Proyek Imperiofish" />
+                    </div>
+                    <div id="inter" className="flex flex-col justify-center my-5 ">
+                      <h1 className="text-xl self-center">{`${data.name}`}</h1> <br />
+                      <div className="text-black mx-auto  my-5">
+                        <span className="">
+                          Role: {`${data.role}`} <br /> Framework : {`${data.framework}`} <br /> Fitur : <br />
+                        </span>
+                        <lo>
+                          {data.feature.map((fitur, index) => {
+                            return <li key={index}>{fitur}</li>;
+                          })}
+                        </lo>
+                      </div>
+                    </div>
+                  </div>
+                </Fragment>
+              );
+            })}
           </div>
         </div>
       </div>
